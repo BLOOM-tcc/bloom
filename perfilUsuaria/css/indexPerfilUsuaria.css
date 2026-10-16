@@ -1,0 +1,564 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100%;           
+  width: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  background-color: #F5F7FA;
+  color: #1F2933;
+  display: flex;
+}
+
+/* TELA*/
+.tela {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #F5F7FA;
+}
+
+/* Menu Lateral */
+.menuLateral {
+  width: 140px;
+  flex-shrink: 0;
+  background: #3B82F6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 44px 0;
+  gap: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
+.menuLateral .logo {
+  width: 40px;
+  height: auto;
+  display: block;
+}
+
+.menuLateral nav {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.menuLateral .navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  color: #F5F7FA;
+  font-size: 1.8vh;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.menuLateral .navItem svg {
+  width: 1.8em;
+  height: 1.8em;
+  stroke: #F5F7FA;
+  fill: none;
+  stroke-width: 1.8;
+}
+
+/* CONTEÚDO */
+.conteudo {
+  flex: 1;
+  min-width: 0;
+  min-height: 100vh;
+  margin-left: 140px;
+  padding: clamp(20px, 2.2vw, 48px) clamp(24px, 3vw, 64px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(14px, 1.3vw, 28px);
+}
+
+.descricaoProcesso {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.material-symbols-outlined {
+  padding: 6px;
+  color: #3B82F6;
+}
+
+.descricaoProcesso > div > h1 {
+  color: #d13de1;
+  font-size: 26px;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: 0 4px 24px rgba(31, 41, 51, 0.05);
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* CARD PERFIL*/
+.cardPerfil {
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(20px, 2vw, 40px);
+  flex-shrink: 0;
+}
+
+.fotoUsuaria {
+  width: clamp(80px, 6.5vw, 130px);
+  height: clamp(80px, 6.5vw, 130px);
+  border-radius: 50%;
+  background: #EADDFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.fotoUsuaria svg {
+  width: 55%;
+  height: 55%;
+  stroke: #4F378A;
+  fill: none;
+  stroke-width: 1.6;
+}
+
+.perfilNome {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1F2933;
+  margin-bottom: 4px;
+}
+
+.perfilCargo {
+  font-size: 15px;
+  color: #9AA0AC;
+  margin-bottom: 10px;
+}
+
+.perfilLocal {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #9AA0AC;
+}
+
+.perfilLocal svg {
+  width: 1.1em;
+  height: 1.1em;
+  stroke: #3B82F6;
+  fill: none;
+  stroke-width: 2;
+}
+
+/* TÍTULO DE SEÇÃO COM ÍCONE */
+.secaoTitulo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 688;
+  color: #1F2933;
+  margin-bottom: clamp(14px, 1.3vw, 26px);
+}
+
+.secaoTitulo svg {
+  width: 1.3em;
+  height: 1.3em;
+  stroke: #3B82F6;
+  fill: none;
+  stroke-width: 1.8;
+  flex-shrink: 0;
+}
+
+/*  DADOS PESSOAIS */
+/* .cardDados {
+
+} */
+
+.dadosGrade {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid #EEF0F5;
+  border-radius: 14px;
+  padding: clamp(16px, 1.4vw, 28px) 0;
+}
+
+.dadosItem {
+  padding: 0 clamp(16px, 1.8vw, 36px);
+  border-right: 1px solid #EEF0F5;
+  min-width: 0;
+}
+
+.dadosItem:last-child {
+  border-right: none;
+}
+
+.dadosRotulo {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  color: #3B82F6;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.dadosRotulo svg {
+  width: 1.15em;
+  height: 1.15em;
+  stroke: #3B82F6;
+  fill: none;
+  stroke-width: 2;
+  flex-shrink: 0;
+}
+
+.dadosValor {
+  font-size: 13px;
+  color: #1F2933;
+  overflow-wrap: anywhere;
+}
+
+/*  CURRÍCULO / EXPERIÊNCIAS */
+.linhaMeio {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 14px;
+  flex: 1 0 auto;
+  align-items: stretch;
+}
+
+/* CURRÍCULO  */
+.curriculoCorpo {
+  display: flex;
+  gap: 14px;
+  flex: 1;
+}
+
+.resumoCaixa {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #EEF0F5;
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.resumoTitulo {
+  font-size: clamp(14px, 1vw, 19px);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.resumoLista {
+  flex: 1;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;   
+  gap: 12px;
+}
+
+.resumoLista li {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;                       
+  font-size: 13px;
+}
+
+.resumoRotulo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #9AA0AC;
+}
+
+.resumoRotulo svg {
+  width: 1.2em;
+  height: 1.2em;
+  stroke: #3B82F6;
+  fill: none;
+  stroke-width: 1.8;
+  flex-shrink: 0;
+}
+
+.resumoValor {
+  color: #1F2933;
+  font-weight: 500;
+}
+
+.curriculoCompleto {
+  width: clamp(180px, 16vw, 320px);
+  flex-shrink: 0;
+  border: 1px solid #EEF0F5;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 20px;
+  text-align: center;
+}
+
+.curriculoCompleto svg {
+  width: clamp(40px, 3.4vw, 70px);
+  height: clamp(40px, 3.4vw, 70px);
+  stroke: #3B82F6;
+  fill: none;
+  stroke-width: 1.5;
+}
+
+.curriculoCompleto span {
+  font-size:13px;
+  font-weight: 600;
+  color: #1F2933;
+}
+
+.botaoVerCurriculo {
+  background: #8B5CF6;
+  color: #FFFFFF;
+  border: none;
+  padding: clamp(10px, 0.8vw, 16px) clamp(22px, 1.8vw, 40px);
+  border-radius: 22px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.botaoVerCurriculo:hover {
+  background: #7c4ae6;
+}
+
+/*  EXPERIÊNCIAS */
+.experienciaLista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.experienciaItem {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border: 1px solid #EEF0F5;
+  border-radius: 12px;
+  padding: 14px 14px;
+  flex: 1;                         
+}
+
+.experienciaIcone {
+  width: clamp(38px, 2.8vw, 56px);
+  height: clamp(38px, 2.8vw, 56px);
+  border-radius: 10px;
+  background: #EEF2FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.experienciaIcone svg {
+  width: 50%;
+  height: 50%;
+  stroke: #3B82F6;
+  fill: none;
+  stroke-width: 1.8;
+}
+
+.experienciaTexto {
+  flex-shrink: 0;
+  width: clamp(120px, 11vw, 220px);
+}
+
+.experienciaCargo {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1F2933;
+}
+
+.experienciaEmpresa {
+  font-size: clamp(12px, 0.9vw, 17px);
+  color: #9AA0AC;
+  margin-top: 4px;
+}
+
+.experienciaDescricao {
+  font-size: 13px;
+  color: #9AA0AC;
+  line-height: 1.5;
+  flex: 1 1 200px;
+  min-width: 0;
+}
+
+/*  CERTIFICADOS  */
+.cardCertificados {
+  flex-shrink: 0;
+}
+
+.certificadosGrade {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 1.3vw, 28px);
+}
+
+.certificadoItem {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border: 1px solid #EEF0F5;
+  border-radius: 12px;
+  padding: clamp(14px, 1.2vw, 24px) clamp(16px, 1.4vw, 28px);
+}
+
+.certificadoIcone {
+  width: clamp(38px, 2.8vw, 56px);
+  height: clamp(38px, 2.8vw, 56px);
+  border-radius: 10px;
+  background: #EEF2FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.certificadoIcone svg {
+  width: 52%;
+  height: 52%;
+  stroke: #3B82F6;
+  fill: none;
+  stroke-width: 1.6;
+}
+
+.certificadoNome {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1F2933;
+}
+
+.certificadoOrg {
+  font-size: 13px;
+  color: #9AA0AC;
+  margin-bottom: 10px;
+}
+
+.certificado-data {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  color: #9AA0AC;
+}
+
+.certificado-data svg {
+  width: 1.1em;
+  height: 1.1em;
+  stroke: #3B82F6;
+  fill: none;
+  stroke-width: 2;
+}
+
+/* ajuste no carde curriculo e experiencia*/
+.linhaMeio > .card {
+  container-type: inline-size;
+}
+
+@container (max-width: 560px) {
+  .curriculoCorpo {
+    flex-direction: column;
+  }
+
+  .curriculoCompleto {
+    width: 100%;
+  }
+}
+
+@container (max-width: 520px) {
+  .experienciaItem {
+    flex-wrap: wrap;
+  }
+
+  .experienciaDescricao {
+    flex-basis: 100%;
+  }
+}
+
+/*  RESPONSIVO  */
+@media (max-width: 1100px) {
+  .linhaMeio {
+    grid-template-columns: 1fr;
+  }
+
+  .dadosGrade {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 20px;
+  }
+
+  .dadosItem {
+    border-right: none;
+  }
+
+  .dadosItem:nth-child(odd) {
+    border-right: 1px solid #EEF0F5;
+  }
+}
+
+@media (max-width: 800px) {
+  .certificadosGrade {
+    grid-template-columns: 1fr;
+  }
+
+  .curriculoCorpo {
+    flex-direction: column;
+  }
+
+  .curriculoCompleto {
+    width: 100%;
+  }
+
+  .experienciaItem {
+    flex-wrap: wrap;
+  }
+
+  .experienciaDescricao {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .menuLateral { width: 80px; }
+  .conteudo { margin-left: 80px; }
+
+  .dadosGrade {
+    grid-template-columns: 1fr;
+  }
+
+  .dadosItem,
+  .dadosItem:nth-child(odd) {
+    border-right: none;
+  }
+}

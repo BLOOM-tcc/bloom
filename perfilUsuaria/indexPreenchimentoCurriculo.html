@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preenchimento de Currículo</title>
+    <link rel="stylesheet" href="css/indexPreenchimentoCurriculo.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back" />
+</head>
+<body>
+
+<div class="tela">
+
+  <aside class="menuLateral">
+      <img class="logo" src="images/logo.png" alt="Logo">
+    <nav>
+      <a class="navItem" href="#">
+        <svg viewBox="0 0 24 24"><path d="M4 21V9l8-6 8 6v12h-6v-7H10v7z"/></svg>
+        Vagas
+      </a>
+      <a class="navItem" href="#">
+        <svg viewBox="0 0 24 24"><path d="M4 19V5m0 14h16M8 19v-6m4 6v-9m4 9V7"/></svg>
+        Dashboard
+      </a>
+      <a class="navItem" href="#">
+        <svg viewBox="0 0 24 24"><path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v13l-8-4-8 4z"/></svg>
+        Trilhas
+      </a>
+      <a class="navItem" href="#">
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8-5.2-4.6 6.9-.6z"/></svg>
+        Ranking
+      </a>
+      <a class="navItem" href="#">
+        <svg viewBox="0 0 24 24"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM4 22c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+        Perfil
+      </a>
+    </nav>
+  </aside>
+
+  <main class="conteudo">
+
+    <header class="descricaoProcesso">
+      <a class="material-symbols-outlined" href="indexPerfilUsuaria.html">arrow_back</a>
+
+          <div>
+              <h1>Meu Currículo</h1>
+          </div>
+  </header>
+
+    <section class="card form-curriculo">
+
+      <p class="subtitulo">Preencha seu currículo para ser encontrada pelas empresas</p>
+
+      <!-- Dados Pessoais -->
+      <section class="bloco">
+        <h3> Dados Pessoais</h3>
+        <div class="linha">
+          <div class="campo">
+            <label>Nome completo</label>
+            <input type="text" placeholder="Nome completo">
+          </div>
+          <div class="campo">
+            <label>Telefone</label>
+            <input type="text" placeholder="(00) 00000-0000">
+          </div>
+          <div class="campo">
+            <label>Data de nascimento</label>
+            <input type="date">
+          </div>
+        </div>
+        <div class="linha">
+          <div class="campo">
+            <label>Cidade/UF</label>
+            <input type="text" placeholder="São Paulo, SP">
+          </div>
+          <div class="campo">
+            <label>E-mail</label>
+            <input type="email" placeholder="seuemail@email.com">
+          </div>
+        </div>
+      </section>
+
+      <!-- Objetivo Profissional -->
+      <section class="bloco">
+        <h3> Objetivo Profissional</h3>
+        <div class="linha">
+          <div class="campo">
+            <label>Área de atuação</label>
+            <select><option>Selecione</option></select>
+          </div>
+          <div class="campo">
+            <label>Cargo desejado</label>
+            <input type="text">
+          </div>
+          <div class="campo">
+            <label>Tipo de trabalho</label>
+            <input type="text">
+          </div>
+        </div>
+        <div class="linha">
+          <div class="campo">
+            <label>Nível de experiência</label>
+            <select><option>Selecione</option></select>
+          </div>
+          <div class="campo">
+            <label>Pretensão salarial</label>
+            <select><option>Selecione</option></select>
+          </div>
+        </div>
+      </section>
+
+      <!-- Formação Acadêmica -->
+      <section class="bloco">
+        <h3> Formação Acadêmica</h3>
+        <div class="linha">
+          <div class="campo">
+            <label>Nível de ensino</label>
+            <select><option>Selecione</option></select>
+          </div>
+          <div class="campo">
+            <label>Tipo de curso</label>
+            <select><option>Selecione</option></select>
+          </div>
+        </div>
+        <div class="linha">
+          <div class="campo">
+            <label>Curso</label>
+            <input type="text">
+          </div>
+          <div class="campo">
+            <label>Instituição de ensino</label>
+            <input type="text">
+          </div>
+        </div>
+        <div class="linha">
+          <div class="campo">
+            <label>Cidade</label>
+            <select><option>Selecione</option></select>
+          </div>
+          <div class="campo">
+            <label>Estado</label>
+            <select><option>Selecione</option></select>
+          </div>
+          <div class="campo checkbox-campo">
+            <label><input type="checkbox"> Usar como localização</label>
+          </div>
+        </div>
+        <div class="linha">
+          <div class="campo">
+            <label>Período de início</label>
+            <input type="date">
+          </div>
+          <div class="campo">
+            <label>Previsão de término</label>
+            <input type="date">
+          </div>
+        </div>
+      </section>
+
+      <!-- Habilidades -->
+      <section class="bloco">
+        <h3> Habilidades</h3>
+        <div class="linha-busca">
+          <input type="text" placeholder=" Buscar habilidade">
+          <button type="button" class="btn-roxo">Adicionar</button>
+        </div>
+        <div class="tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">PHP</span>
+          <span class="tag">Java</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+        </div>
+      </section>
+
+      <!-- Idiomas -->
+      <section class="bloco">
+        <h3> Idiomas</h3>
+        <div class="linha">
+          <div class="campo">
+            <label>Idioma</label>
+            <select><option>Português</option></select>
+          </div>
+          <div class="campo">
+            <label>Nível</label>
+            <select><option>Nativo</option></select>
+          </div>
+        </div>
+        <div class="linha">
+          <div class="campo">
+            <label>Idioma</label>
+            <select><option>Inglês</option></select>
+          </div>
+          <div class="campo">
+            <label>Nível</label>
+            <select><option>Intermediário</option></select>
+          </div>
+        </div>
+        <button type="button" class="btn-link">+ Adicionar idioma</button>
+      </section>
+
+      <!-- Experiências -->
+      <section class="bloco">
+        <h3> Experiências</h3>
+        <div class="linha">
+          <div class="campo">
+            <label>Empresa</label>
+            <input type="text">
+          </div>
+          <div class="campo">
+            <label>Cargo</label>
+            <input type="text">
+          </div>
+        </div>
+        <div class="linha">
+          <div class="campo">
+            <label>Período</label>
+            <input type="date">
+          </div>
+          <div class="campo">
+            <label>até</label>
+            <input type="date">
+          </div>
+          <div class="campo checkbox-campo">
+            <label><input type="checkbox"> Atual</label>
+          </div>
+        </div>
+        <div class="campo campo-full">
+          <label>Descrição das atividades</label>
+          <textarea rows="4"></textarea>
+        </div>
+      </section>
+
+      <!-- Certificados -->
+      <section class="bloco">
+        <h3> Certificados</h3>
+        <div class="linha">
+          <div class="campo">
+            <label>Nome do certificado</label>
+            <input type="text">
+          </div>
+          <div class="campo">
+            <label>Instituição</label>
+            <input type="text">
+          </div>
+          <div class="campo">
+            <label>Ano de certificação</label>
+            <input type="text" placeholder="Ano">
+          </div>
+        </div>
+        <div class="linha">
+          <div class="campo">
+            <label>Nome do certificado</label>
+            <input type="text">
+          </div>
+          <div class="campo">
+            <label>Instituição</label>
+            <input type="text">
+          </div>
+          <div class="campo">
+            <label>Ano de certificação</label>
+            <input type="text" placeholder="Ano">
+          </div>
+        </div>
+        <button type="button" class="btn-link">+ Adicionar certificado</button>
+      </section>
+
+      <!-- Botões -->
+      <div class="linha-botoes">
+        <button type="button" class="btn-roxo-claro">Voltar</button>
+        <button type="submit" class="btn-roxo">Salvar</button>
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+</body>
