@@ -1,0 +1,560 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #f4f7fb;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #171b2d;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.top-header {
+    width: 100%;
+    height: 94px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 40px;
+    gap: 18px;
+}
+
+.back {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #347fea;
+    text-decoration: none;
+}
+
+.back svg {
+    width: 32px;
+    height: 32px;
+
+    stroke: currentColor;
+    stroke-width: 1.8;
+    fill: none;
+}
+
+.page-title {
+    color:  #d13de1;
+
+    font-size: 25px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+/* =========================
+   ÁREA PRINCIPAL
+========================= */
+
+.container {
+    width: 100%;
+    height: calc(100vh - 94px);
+
+    padding: 0 40px 40px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+    width: 95%;
+    height: 95%;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e5eb;
+    border-radius: 11px;
+
+    padding: 26px 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.section-title {
+    font-size: 20px;
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+.section-description {
+    font-size: 11px;
+    color: #8d929c;
+
+    margin-bottom: 21px;
+}
+
+
+/* =========================
+   CABEÇALHO DA TABELA
+========================= */
+
+.table-header {
+    height: 43px;
+
+    background: #f8f9fb;
+
+    border-radius: 6px;
+
+    display: grid;
+    grid-template-columns: 1fr 130px;
+
+    align-items: center;
+
+    padding: 0 18px;
+
+    color: #687080;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   LISTA
+========================= */
+
+.candidates {
+    width: 100%;
+}
+
+
+/* =========================
+   CANDIDATA
+========================= */
+
+.candidate {
+    width: 100%;
+    height: 66px;
+
+    border-bottom: 1px solid #e7e9ed;
+
+    display: grid;
+    grid-template-columns: 1fr 130px;
+
+    align-items: center;
+
+    padding: 0 18px;
+}
+
+
+/* =========================
+   INFORMAÇÕES
+========================= */
+
+.candidate-info {
+    display: flex;
+    align-items: center;
+
+    min-width: 0;
+}
+
+.candidate-avatar {
+    width: 32px;
+    height: 32px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+
+/* Cores dos avatares */
+
+.avatar-blue {
+    background: #e2e8ff;
+    color: #5868e8;
+}
+
+.avatar-green {
+    background: #ddf8e9;
+    color: #24a967;
+}
+
+.avatar-pink {
+    background: #fde2ef;
+    color: #dc3e85;
+}
+
+.avatar-yellow {
+    background: #fff0c9;
+    color: #d99100;
+}
+
+.avatar-purple {
+    background: #eee5ff;
+    color: #8a57dc;
+}
+
+
+/* =========================
+   NOME E CARGO
+========================= */
+
+.candidate-details {
+    margin-left: 13px;
+}
+
+.candidate-name {
+    font-size: 11px;
+    font-weight: 700;
+
+    color: #202332;
+
+    margin-bottom: 4px;
+}
+
+.candidate-role {
+    font-size: 9px;
+
+    color: #626873;
+}
+
+
+/* =========================
+   AÇÃO
+========================= */
+
+.candidate-action {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.resume-button {
+    width: 90px;
+    height: 34px;
+
+    border: none;
+    border-radius: 6px;
+
+    background:  #d13de1;
+
+    color: #ffffff;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.resume-button:hover {
+    background:  #d13de1;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+.card-footer {
+    margin-top: auto;
+
+    display: flex;
+    align-items: center;
+}
+
+.results {
+    font-size: 10px;
+
+    color: #202332;
+}
+
+
+/* =========================
+   MONITORES GRANDES
+========================= */
+
+@media (min-width: 1600px) {
+
+    .top-header {
+        height: 104px;
+        padding: 0 48px;
+    }
+
+    .container {
+        height: calc(100vh - 104px);
+        padding: 0 48px 48px;
+    }
+
+    .card {
+        padding: 40px 42px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .section-description {
+        font-size: 12px;
+        margin-bottom: 23px;
+    }
+
+    .table-header {
+        height: 46px;
+
+        grid-template-columns: 1fr 150px;
+
+        font-size: 10px;
+    }
+
+    .candidate {
+        height: 72px;
+
+        grid-template-columns: 1fr 150px;
+    }
+
+    .candidate-avatar {
+        width: 34px;
+        height: 34px;
+
+        font-size: 10px;
+    }
+
+    .candidate-details {
+        margin-left: 14px;
+    }
+
+    .candidate-name {
+        font-size: 12px;
+    }
+
+    .candidate-role {
+        font-size: 10px;
+    }
+
+    .resume-button {
+        width: 94px;
+        height: 36px;
+
+        font-size: 10px;
+    }
+
+    .results {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+    .top-header {
+        padding: 0 25px;
+    }
+
+    .container {
+        padding: 0 25px 25px;
+    }
+
+    .card {
+        padding: 28px;
+    }
+
+    .section-title {
+        font-size: 19px;
+    }
+
+    .section-description {
+        font-size: 10px;
+    }
+
+    .table-header,
+    .candidate {
+        grid-template-columns: 1fr 110px;
+    }
+
+    .table-header {
+        height: 42px;
+    }
+
+    .candidate {
+        height: 65px;
+    }
+
+    .candidate-avatar {
+        width: 30px;
+        height: 30px;
+    }
+
+    .candidate-name {
+        font-size: 10px;
+    }
+
+    .candidate-role {
+        font-size: 8px;
+    }
+
+    .resume-button {
+        width: 84px;
+        height: 32px;
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 550px) {
+
+    .top-header {
+        height: 72px;
+        padding: 0 16px;
+        gap: 14px;
+    }
+
+    .container {
+        height: calc(100vh - 72px);
+        padding: 0 15px 15px;
+    }
+
+    .card {
+        padding: 22px 16px;
+    }
+
+    .back {
+        width: 36px;
+        height: 36px;
+    }
+
+    .back svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .page-title {
+        font-size: 19px;
+    }
+
+    .section-title {
+        font-size: 17px;
+    }
+
+    .section-description {
+        font-size: 10px;
+        margin-bottom: 19px;
+    }
+
+    .table-header {
+        height: 42px;
+
+        grid-template-columns: 1fr 95px;
+        padding: 0 11px;
+
+        font-size: 8px;
+    }
+
+    .candidate {
+        height: 64px;
+
+        grid-template-columns: 1fr 95px;
+        padding: 0 11px;
+    }
+
+    .candidate-avatar {
+        width: 29px;
+        height: 29px;
+
+        font-size: 8px;
+    }
+
+    .candidate-details {
+        margin-left: 9px;
+    }
+
+    .candidate-name {
+        font-size: 10px;
+        margin-bottom: 3px;
+    }
+
+    .candidate-role {
+        font-size: 8px;
+    }
+
+    .resume-button {
+        width: 82px;
+        height: 31px;
+
+        font-size: 8px;
+    }
+
+    .results {
+        font-size: 9px;
+    }
+}
+
+
+/* =========================
+   POSICIONAMENTO AO LADO DO MENU
+   (menu.css permanece intacto)
+========================= */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.top-header {
+    width: calc(100% - 80px);
+    margin-left: 80px;
+}
+
+.container {
+    width: calc(100% - 80px);
+    margin-left: 80px;
+}
+
+@media (max-width: 600px) {
+    .top-header {
+        width: calc(100% - 70px);
+        margin-left: 70px;
+    }
+
+    .container {
+        width: calc(100% - 70px);
+        margin-left: 70px;
+    }
+}

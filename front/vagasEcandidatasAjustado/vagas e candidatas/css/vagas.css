@@ -1,0 +1,564 @@
+/* =========================
+   MENU LATERAL DA PÁGINA
+   Mantém o menu.css intacto.
+========================= */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: #f4f7fb;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #171b2d;
+
+    /* O menu possui 80px */
+    --sidebar-width: 80px;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.top-header {
+    width: calc(100% - var(--sidebar-width));
+    height: 90px;
+
+    margin-left: var(--sidebar-width);
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 40px;
+    gap: 18px;
+}
+
+.back {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #347fea;
+    text-decoration: none;
+}
+
+.back svg {
+    width: 30px;
+    height: 30px;
+
+    stroke: currentColor;
+    stroke-width: 1.8;
+    fill: none;
+}
+
+.page-title {
+    color: #d13de1;
+
+    font-size: 23px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+/* =========================
+   ÁREA PRINCIPAL
+========================= */
+
+.container {
+    width: calc(100% - var(--sidebar-width));
+    height: calc(100vh - 90px);
+
+    margin-left: var(--sidebar-width);
+
+    padding: 0 90px 40px;
+}
+
+
+/* =========================
+   CARD PRINCIPAL
+========================= */
+
+.card {
+    width: 95%;
+    height: 95%;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e5eb;
+    border-radius: 11px;
+
+    padding: 26px 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.section-title {
+    font-size: 21px;
+    font-weight: 700;
+    font-style: italic;
+
+    margin-bottom: 9px;
+}
+
+.section-description {
+    font-size: 12px;
+    color: #8d929c;
+    font-style: italic;
+
+    margin-bottom: 23px;
+}
+
+
+/* =========================
+   SELECT
+========================= */
+
+.select-wrapper {
+    position: relative;
+    width: 100%;
+
+    margin-bottom: 21px;
+}
+
+.select-wrapper select {
+    width: 100%;
+    height: 46px;
+
+    border: 1px solid #dfe4eb;
+    border-radius: 7px;
+
+    background: #f9fafb;
+
+    color: #9ca3af;
+
+    padding: 0 16px;
+
+    font-size: 11px;
+    font-style: italic;
+
+    outline: none;
+
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.select-wrapper select:focus {
+    border-color: #347fea;
+}
+
+.select-arrow {
+    position: absolute;
+
+    right: 15px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    pointer-events: none;
+
+    color: #111827;
+}
+
+.select-arrow svg {
+    width: 15px;
+    height: 15px;
+
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+}
+
+
+/* =========================
+   GRID DE VAGAS
+========================= */
+
+.jobs-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    column-gap: 32px;
+    row-gap: 20px;
+
+    min-width: 0;
+}
+
+
+/* =========================
+   CARD DA VAGA
+========================= */
+
+.job {
+    width: 100%;
+    height: 78px;
+
+    border: 1px solid #dce1e8;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 20px 0 12px;
+
+    background: #fff;
+
+    min-width: 0;
+
+    transition: all 0.2s ease;
+}
+
+.job:hover {
+    border-color: #c8cdd6;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   AVATAR
+========================= */
+
+.job-avatar {
+    width: 27px;
+    height: 27px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #e9edff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #6d73ed;
+
+    font-size: 10px;
+    font-weight: 500;
+}
+
+
+/* =========================
+   INFORMAÇÕES
+========================= */
+
+.job-info {
+    margin-left: 12px;
+
+    min-width: 0;
+
+    flex: 1;
+}
+
+.job-title {
+    font-size: 11px;
+
+    font-weight: 700;
+
+    color: #202332;
+
+    margin-bottom: 7px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.job-details {
+    font-size: 9px;
+
+    color: #9297a1;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   BOTÃO CANDIDATURAS
+========================= */
+
+.job-button {
+    width: 76px;
+    height: 32px;
+
+    border: none;
+    border-radius: 5px;
+
+    background: #d13de1;
+
+    color: white;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+    transition: 0.2s;
+}
+
+.job-button:hover {
+    background: #bd2ccd;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+.card-footer {
+    width: 100%;
+
+    margin-top: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.available {
+    font-size: 10px;
+
+    color: #202332;
+
+    font-style: italic;
+}
+
+.follow-button {
+    height: 34px;
+
+    padding: 0 15px;
+
+    border: none;
+    border-radius: 5px;
+
+    background: #d13de1;
+
+    color: white;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.follow-button:hover {
+    background: #bd2ccd;
+}
+
+
+/* =========================
+   MONITORES GRANDES
+========================= */
+
+@media (min-width: 1600px) {
+
+    .top-header {
+        height: 100px;
+
+        width: calc(100% - var(--sidebar-width));
+
+        padding: 0 48px;
+    }
+
+    .container {
+        width: calc(100% - var(--sidebar-width));
+        height: calc(100vh - 100px);
+
+        padding: 0 48px 48px;
+    }
+
+    .card {
+        padding: 45px 48px;
+    }
+
+    .section-title {
+        font-size: 23px;
+    }
+
+    .section-description {
+        font-size: 13px;
+        margin-bottom: 26px;
+    }
+
+    .select-wrapper {
+        margin-bottom: 24px;
+    }
+
+    .select-wrapper select {
+        height: 50px;
+        font-size: 12px;
+    }
+
+    .jobs-grid {
+        column-gap: 36px;
+        row-gap: 23px;
+    }
+
+    .job {
+        height: 84px;
+    }
+
+    .job-avatar {
+        width: 29px;
+        height: 29px;
+    }
+
+    .job-title {
+        font-size: 12px;
+    }
+
+    .job-details {
+        font-size: 10px;
+    }
+
+    .job-button {
+        width: 82px;
+        height: 34px;
+        font-size: 8px;
+    }
+
+    .available {
+        font-size: 11px;
+    }
+
+    .follow-button {
+        height: 36px;
+        padding: 0 17px;
+        font-size: 9px;
+    }
+}
+
+
+/* =========================
+   TABLET / NOTEBOOK
+========================= */
+
+@media (max-width: 900px) {
+
+    .top-header {
+        padding: 0 25px;
+    }
+
+    .container {
+        padding: 0 25px 25px;
+    }
+
+    .card {
+        padding: 28px;
+    }
+
+    .jobs-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+
+
+
+    /*
+       O menu continua sendo controlado
+       exclusivamente pelo menu.css.
+    */
+
+    .top-header {
+        width: calc(100% - 70px);
+        margin-left: 70px;
+
+        height: 70px;
+        padding: 0 16px;
+    }
+
+    .container {
+        width: calc(100% - 70px);
+        margin-left: 70px;
+
+        height: calc(100vh - 70px);
+        padding: 0 15px 15px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .page-title {
+        font-size: 18px;
+    }
+
+    .section-title {
+        font-size: 17px;
+    }
+
+    .section-description {
+        font-size: 10px;
+    }
+
+    .jobs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .job {
+        height: 70px;
+        padding-right: 10px;
+    }
+
+    .job-title {
+        font-size: 10px;
+    }
+
+    .job-details {
+        font-size: 8px;
+    }
+
+    .job-button {
+        width: 68px;
+        height: 29px;
+    }
+}

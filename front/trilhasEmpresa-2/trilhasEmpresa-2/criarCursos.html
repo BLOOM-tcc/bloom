@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+  <title>
+   Criar curso | Bloom
+  </title>
+  <link href="estilo.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,0..1" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="app">
+   <aside class="sidebar">
+    <a class="brand" href="trilhas.html">
+     <img alt="Bloom" src="img/logoBloom.png"/>
+    </a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="nav-link" href="#" aria-label="Vagas">
+        <span class="material-symbols-outlined" aria-hidden="true">home</span>
+        <span>Vagas</span>
+      </a>
+      <a class="nav-link" href="#" aria-label="Candidaturas">
+        <span class="material-symbols-outlined" aria-hidden="true">work</span>
+        <span>Candidaturas</span>
+      </a>
+      <a class="nav-link" href="#" aria-label="Dashboard">
+        <span class="material-symbols-outlined" aria-hidden="true">monitoring</span>
+        <span>Dashboard</span>
+      </a>
+      <a class="nav-link active" href="trilhas.html" aria-current="page" aria-label="Trilhas">
+        <span class="material-symbols-outlined" aria-hidden="true">menu_book</span>
+        <span>Trilhas</span>
+      </a>
+      <a class="nav-link" href="#" aria-label="Ranking">
+        <span class="material-symbols-outlined" aria-hidden="true">leaderboard</span>
+        <span>Ranking</span>
+      </a>
+      <a class="nav-link" href="#" aria-label="Perfil">
+        <span class="material-symbols-outlined" aria-hidden="true">person</span>
+        <span>Perfil</span>
+      </a>
+    </nav>
+   </aside>
+   <main class="main">
+    <div class="content form-page">
+     <a class="back-link" href="trilhas.html">
+      <span class="material-symbols-outlined">
+       arrow_back
+      </span>
+      <span class="back-label">Trilhas</span>
+     </a>
+     <div class="page-heading">
+      <div>
+       <h1>
+        Criar curso
+       </h1>
+       <p>
+        Crie um curso independente para disponibilizar &agrave;s candidatas ou adicionar posteriormente a uma trilha.
+       </p>
+      </div>
+     </div>
+     <section class="panel">
+      <div class="form-grid">
+       <div class="form-group">
+        <label>
+         Nome do curso
+        </label>
+        <input placeholder="Ex.: Comunica&ccedil;&atilde;o no ambiente de trabalho"/>
+       </div>
+       <div class="form-group">
+        <label>
+         Categoria
+        </label>
+        <select>
+         <option>
+          Selecione uma categoria
+         </option>
+         <option>
+          Comunica&ccedil;&atilde;o
+         </option>
+         <option>
+          Tecnologia
+         </option>
+         <option>
+          Gest&atilde;o
+         </option>
+         <option>
+          Atendimento
+         </option>
+        </select>
+       </div>
+       <div class="form-group full">
+        <label>
+         Descri&ccedil;&atilde;o
+        </label>
+        <textarea placeholder="Apresente os principais conte&uacute;dos e objetivos do curso."></textarea>
+       </div>
+       <div class="form-group">
+        <label>
+         Carga hor&aacute;ria
+        </label>
+        <input placeholder="Ex.: 20 horas"/>
+       </div>
+       <div class="form-group">
+        <label>
+         N&iacute;vel
+        </label>
+        <select>
+         <option>
+          Iniciante
+         </option>
+         <option>
+          Intermedi&aacute;rio
+         </option>
+         <option>
+          Avan&ccedil;ado
+         </option>
+        </select>
+       </div>
+       <div class="form-group">
+        <label>
+         Certificado
+        </label>
+        <select>
+         <option>
+          Certificado incluso
+         </option>
+         <option>
+          Sem certificado
+         </option>
+        </select>
+       </div>
+       <div class="form-group">
+        <label>
+         Imagem/capa
+        </label>
+        <input type="file"/>
+       </div>
+      </div>
+      <div class="course-picker">
+       <h2>
+        Conte&uacute;do do curso
+       </h2>
+       <div class="info-note">
+        Depois de criar o curso, a empresa poder&aacute; organizar os m&oacute;dulos e conte&uacute;dos que far&atilde;o parte da forma&ccedil;&atilde;o.
+       </div>
+       <a class="small-primary" href="#">
+        + Adicionar m&oacute;dulo
+       </a>
+      </div>
+      <div class="form-actions">
+       <a class="secondary-button" href="trilhas.html">
+        Cancelar
+       </a>
+       <a class="primary-button" href="cursos.html">
+        Criar curso
+       </a>
+      </div>
+     </section>
+    </div>
+   </main>
+  </div>
+ </body>
+</html>

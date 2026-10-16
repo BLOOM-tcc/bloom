@@ -1,0 +1,283 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-family: "Roboto", sans-serif;
+    background-image: url(../image/fundoLoginCadastro.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.fundoImagem {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 10%;
+    border-radius: 10px;
+}
+
+
+.login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 20%;
+    padding: 3%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0px 0px 27px 1px #88888878;
+}
+
+.login > h2 {
+    text-align: center;
+}
+
+.login > p {
+    text-align: center;
+}
+
+.login > button {
+    padding: 10px;
+    border: thin;
+    border-radius: 13px;
+    background-color: #d13de1;     
+    color: #ffffff;
+}
+
+.login > input {
+    border-radius: 5px;
+    border: solid thin;
+    padding: 4.5px;
+}
+
+.msg {
+    padding: 20px;    
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    width: 100%;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.3);
+}
+
+.erro {
+    background-color: rgb(172, 5, 5);
+    color: #fff;
+}
+
+.sucesso {
+    background-color: rgb(12, 134, 12);
+    color: #fff;
+}
+
+img {
+    height: 78px;
+    width: 83px;
+    margin: auto;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-image: url("../image/fundoLoginCadastro.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* Área de fundo do login */
+.fundoImagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+
+/* Cartão de login */
+.login {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    width: 100%;
+    max-width: 400px;
+    padding: 35px 30px;
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 0px 27px 1px #88888878;
+}
+
+/* Título */
+.login > h2 {
+    text-align: center;
+    font-size: 26px;
+    margin: 10px 0;
+}
+
+/* Texto */
+.login > p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Botão de login */
+.login > button {
+    width: 100%;
+    padding: 12px;
+
+    border: none;
+    border-radius: 13px;
+
+    background-color: #d13de1;
+    color: #ffffff;
+
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login > button:hover {
+    background-color: #b92ac9;
+}
+
+/* Campos de entrada */
+.login > input {
+    width: 100%;
+    min-width: 0;
+    padding: 10px;
+
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+
+    font-size: 16px;
+}
+
+/* Mensagens de erro e sucesso */
+.msg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 101;
+
+    width: 100%;
+    padding: 16px 20px;
+
+    text-align: center;
+    overflow-wrap: anywhere;
+
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.3);
+}
+
+.erro {
+    background-color: rgb(172, 5, 5);
+    color: #fff;
+    border-radius: 5px;
+    width: 20%;
+    position: relative;
+    margin: auto;
+}
+
+.sucesso {
+    background-color: rgb(12, 134, 12);
+    color: #fff;
+}
+
+/* Imagens e logo */
+.login > img {
+    display: block;
+    width: 83px;
+    height: 78px;
+    max-width: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .fundoImagem {
+        padding: 25px 20px;
+    }
+
+    .login {
+        max-width: 380px;
+        padding: 30px 25px;
+    }
+
+    .login > h2 {
+        font-size: 24px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    .fundoImagem {
+        padding: 20px 15px;
+    }
+
+    .login {
+        max-width: 100%;
+        padding: 25px 20px;
+        gap: 10px;
+    }
+
+    .login > h2 {
+        font-size: 22px;
+    }
+
+    .login > p {
+        font-size: 14px;
+    }
+
+    .msg {
+        padding: 14px 12px;
+        font-size: 14px;
+    }
+}
+
+/* Celulares muito pequenos */
+@media (max-width: 360px) {
+    .fundoImagem {
+        padding: 15px 10px;
+    }
+
+    .login {
+        padding: 20px 15px;
+    }
+
+    .login > h2 {
+        font-size: 20px;
+    }
+
+    .login > img {
+        width: 70px;
+        height: 66px;
+    }
+}
+
+/* Telas com pouca altura */
+@media (max-height: 600px) {
+    .fundoImagem {
+        align-items: flex-start;
+    }
+
+    .login {
+        margin: 15px 0;
+    }
+}

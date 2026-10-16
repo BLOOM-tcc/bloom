@@ -1,0 +1,31 @@
+<?php 
+class Usuaria extends Banco {
+	public $Cpf;
+	public $Nome;
+
+	public function __construct($cpf = null, $nome = null) {
+		$this->Cpf = $cpf;
+		$this->Nome = $nome;
+	}
+
+	public static function Acessar($login, $senha) {
+		$parametros = [
+			'pLogin'=>$login,
+			'pSenha'=>$senha
+		];
+		return self::Consultar('acessar', $parametros);
+	}
+
+	public static function Cadastrar($nome, $email, $telefone, $cpf, $senha) {
+		$parametros = [
+			'pCpf'=>$cpf,
+			'pNome'=>$nome,
+			'pEmail'=>$email,
+			'pTelefone'=>$telefone,
+			'pSenha'=>$senha
+		];
+		return self::Executar('cadastrarUsuaria', $parametros);
+	}
+
+}
+?>

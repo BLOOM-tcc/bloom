@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+  <title>
+   Editar trilha | Bloom
+  </title>
+  <link href="estilo.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,0..1" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="app">
+   <aside class="sidebar">
+    <a class="brand" href="trilhas.html">
+     <img alt="Bloom" src="img/logoBloom.png"/>
+    </a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="nav-link" href="#" aria-label="Vagas">
+        <span class="material-symbols-outlined" aria-hidden="true">home</span>
+        <span>Vagas</span>
+      </a>
+      <a class="nav-link" href="#" aria-label="Candidaturas">
+        <span class="material-symbols-outlined" aria-hidden="true">work</span>
+        <span>Candidaturas</span>
+      </a>
+      <a class="nav-link" href="#" aria-label="Dashboard">
+        <span class="material-symbols-outlined" aria-hidden="true">monitoring</span>
+        <span>Dashboard</span>
+      </a>
+      <a class="nav-link active" href="trilhas.html" aria-current="page" aria-label="Trilhas">
+        <span class="material-symbols-outlined" aria-hidden="true">menu_book</span>
+        <span>Trilhas</span>
+      </a>
+      <a class="nav-link" href="#" aria-label="Ranking">
+        <span class="material-symbols-outlined" aria-hidden="true">leaderboard</span>
+        <span>Ranking</span>
+      </a>
+      <a class="nav-link" href="#" aria-label="Perfil">
+        <span class="material-symbols-outlined" aria-hidden="true">person</span>
+        <span>Perfil</span>
+      </a>
+    </nav>
+   </aside>
+   <main class="main">
+    <div class="content form-page">
+     <a class="back-link" href="trilhas.html">
+      <span class="material-symbols-outlined">
+       arrow_back
+      </span>
+      <span class="back-label">Trilhas</span>
+     </a>
+     <div class="page-heading">
+      <div>
+       <h1>
+        Editar trilha
+       </h1>
+       <p>
+        Atualize as informa&ccedil;&otilde;es e os cursos da trilha.
+       </p>
+      </div>
+     </div>
+     <section class="panel">
+      <div class="form-grid">
+       <div class="form-group">
+        <label>
+         Nome da trilha
+        </label>
+        <input value="Atendimento ao cliente"/>
+       </div>
+       <div class="form-group">
+        <label>
+         Categoria
+        </label>
+        <select>
+         <option>
+          Atendimento
+         </option>
+         <option>
+          Tecnologia
+         </option>
+         <option>
+          Gest&atilde;o
+         </option>
+         <option>
+          Comunica&ccedil;&atilde;o
+         </option>
+        </select>
+       </div>
+       <div class="form-group full">
+        <label>
+         Descri&ccedil;&atilde;o
+        </label>
+        <textarea>Desenvolvimento de conhecimentos essenciais para atendimento ao cliente, comunica&ccedil;&atilde;o profissional e relacionamento com o p&uacute;blico.</textarea>
+       </div>
+       <div class="form-group">
+        <label>
+         Objetivo
+        </label>
+        <input value="Preparar para atendimento ao p&uacute;blico"/>
+       </div>
+       <div class="form-group">
+        <label>
+         Status
+        </label>
+        <select>
+         <option>
+          Ativa
+         </option>
+         <option>
+          Desativada
+         </option>
+        </select>
+       </div>
+      </div>
+      <div class="course-picker">
+       <h2>
+        Cursos da trilha
+       </h2>
+       <div class="picker-list">
+        <label class="picker-item">
+         <input checked="" type="checkbox"/>
+         <div>
+          <strong>
+           Atendimento ao cliente
+          </strong>
+          <span>
+           20 horas &middot; Certificado dispon&iacute;vel
+          </span>
+         </div>
+        </label>
+        <label class="picker-item">
+         <input checked="" type="checkbox"/>
+         <div>
+          <strong>
+           Comunica&ccedil;&atilde;o Profissional
+          </strong>
+          <span>
+           15 horas &middot; Certificado dispon&iacute;vel
+          </span>
+         </div>
+        </label>
+        <label class="picker-item">
+         <input checked="" type="checkbox"/>
+         <div>
+          <strong>
+           Intelig&ecirc;ncia emocional
+          </strong>
+          <span>
+           12 horas &middot; Certificado dispon&iacute;vel
+          </span>
+         </div>
+        </label>
+        <label class="picker-item">
+         <input type="checkbox"/>
+         <div>
+          <strong>
+           Excel para o mercado de trabalho
+          </strong>
+          <span>
+           30 horas &middot; Certificado dispon&iacute;vel
+          </span>
+         </div>
+        </label>
+       </div>
+       <a class="small-primary" href="criarCursos.html" style="margin-top:10px">
+        + Criar novo curso
+       </a>
+      </div>
+      <div class="form-actions">
+       <a class="secondary-button" href="trilhas.html">
+        Cancelar
+       </a>
+       <a class="primary-button" href="trilhas.html">
+        Salvar altera&ccedil;&otilde;es
+       </a>
+      </div>
+     </section>
+    </div>
+   </main>
+  </div>
+ </body>
+</html>

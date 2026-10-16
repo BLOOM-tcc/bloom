@@ -1,0 +1,633 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+
+img {
+    height: 40px;
+}
+
+header {
+    background-color: #013a97;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 14px;
+    position: relative;
+}
+
+header > button {
+    padding: 10px;
+    border: thin;
+    border-radius: 13px;
+    background-color: #d13de1; 
+    color: white;  
+    width: 85px;
+}
+
+.header {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-left: 2%;
+    padding: 9px;
+    color: #ffffff;
+}
+
+.identidade {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.identidade > h1 {
+    border-left: solid thin  rgb(255 255 255);
+    padding-left: 7%;
+}
+
+.suporte {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+
+.suporte p {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.mensagem {
+    margin-top: 5%;
+    margin-left: 5%;
+    color:#ffffff;
+}
+
+.mensagem > h1 {
+    font-size: 35px;
+    width: 51%;
+}
+
+.mensagem > p {
+    font-size: 22px;
+    width: 30%;
+}
+
+.identificacao > button {
+    width: 12%;
+    padding: 10px;
+    border: thin;
+    border-radius: 13px;
+    background-color: #d13de1;   
+    color: #ffffff;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.fundo {
+    background-image: url('../image/mulher.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: #f3f6f9; */
+    padding: 48px;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .como-funciona {
+    width: 80%;
+    padding: 10px 32px 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    margin: auto;
+    margin-top: 2%;
+  }
+
+
+/* TÍTULO */
+  .titulo-secao {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  
+  .titulo-secao span {
+    display: block;
+    width: 38px;
+    height: 2px;
+    background: #cba1e7;
+  }
+  
+  .titulo-secao h2 {
+    margin: 0;
+    color: #3d267d;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  
+  /* CONTAINER DOS PASSOS */
+  .passos {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+  }
+  
+  /* CADA PASSO */
+  .passo {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+  }
+  
+  /* ÍCONE */
+  .icone {
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    background: #f6eafa;
+    border-radius: 50%;
+  }
+  
+  .icone svg {
+    width: 35px;
+    height: 35px;
+    stroke: #5724a0;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  
+  /* TEXTO */
+  .conteudo {
+    margin-left: 24px;
+  }
+  
+  .numero {
+    display: block;
+    margin-bottom: 2px;
+  
+    color: #bd72df;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .conteudo h3 {
+    margin: 0 0 5px;
+  
+    color: #25135f;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .conteudo p {
+    margin: 0;
+  
+    color: #52526d;
+    font-size: 12px;
+    line-height: 1.45;
+  }
+  
+  /* SETAS */
+  .seta {
+    flex-shrink: 0;
+  
+    color: #c86be3;
+    font-size: 28px;
+    font-weight: 300;
+    margin: 0 8px;
+  }
+  
+  /* RESPONSIVO */
+  @media (max-width: 900px) {
+    .passos {
+      gap: 15px;
+    }
+  
+    .icone {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .icone svg {
+      width: 29px;
+      height: 29px;
+    }
+  
+    .conteudo {
+      margin-left: 15px;
+    }
+  
+    .conteudo p {
+      font-size: 11px;
+    }
+  
+    .seta {
+      font-size: 22px;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .passos {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .passo {
+      width: 100%;
+    }
+  
+    .seta {
+      display: none;
+    }
+  
+    .como-funciona {
+      padding: 20px;
+    }
+  
+    .icone {
+      width: 65px;
+      height: 65px;
+    }
+  }
+
+  .empresa-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+  
+    width: 90%;
+    min-height: 132px;
+  
+    margin: auto;
+    overflow: hidden;
+
+    margin-top: 2%;
+
+  
+    background: linear-gradient(
+      90deg,
+      #f5edfc 0%,
+      #f8f2fc 50%,
+      #f5effb 100%
+    );
+  
+    border-radius: 10px;
+  }
+  
+  /* Imagem floral à esquerda */
+  .empresa-imagem {
+    width: 220px;
+    height: 132px;
+    flex-shrink: 0;
+  
+    background-image: url('../image/image3.png');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Conteúdo principal */
+  .empresa-conteudo {
+    padding-left: 22px;
+    min-width: 420px;
+  }
+  
+  /* Pequeno título "PARA EMPRESAS" */
+  .empresa-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  
+    margin-bottom: 10px;
+  
+    color: #7437a8;
+  
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  
+  .empresa-label span {
+    display: block;
+  
+    width: 31px;
+    height: 2px;
+  
+    background-color: #8f3bc5;
+  }
+  
+  /* Título */
+  .empresa-conteudo h2 {
+    margin: 0;
+  
+    color: #21126d;
+  
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    line-height: 1.25;
+    font-weight: 500;
+  }
+  
+  /* Texto */
+  .empresa-descricao {
+    margin-left: auto;
+    margin-right: 65px;
+  }
+  
+  .empresa-descricao p {
+    margin: 0;
+  
+    color: #44367c;
+  
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  
+  /* Botão */
+  .empresa-botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  
+    min-width: 180px;
+    height: 42px;
+  
+    margin-right: 195px;
+  
+    border: 1.5px solid #b144df;
+    border-radius: 25px;
+  
+    color: #9c27d8;
+    background-color: transparent;
+  
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+  
+    text-decoration: none;
+  
+    transition: all 0.25s ease;
+  }
+  
+  .empresa-botao span {
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1;
+  }
+  
+  .empresa-botao:hover {
+    color: white;
+    background-color: #9c27d8;
+  }
+  
+  .empresa-botao:hover span {
+    transform: translateX(3px);
+  }
+  
+  
+  /* =========================
+     RESPONSIVO
+  ========================= */
+  
+  @media (max-width: 1100px) {
+    .empresa-section {
+      width: calc(100% - 40px);
+      margin: 0 20px;
+    }
+  
+    .empresa-imagem {
+      width: 170px;
+    }
+  
+    .empresa-conteudo {
+      min-width: 350px;
+    }
+  
+    .empresa-descricao {
+      margin-right: 30px;
+    }
+  
+    .empresa-botao {
+      margin-right: 30px;
+    }
+  }
+  
+  @media (max-width: 850px) {
+    .empresa-section {
+      flex-wrap: wrap;
+      padding: 25px;
+    }
+  
+    .empresa-imagem {
+      display: none;
+    }
+  
+    .empresa-conteudo {
+      min-width: 0;
+      width: 100%;
+      padding-left: 0;
+    }
+  
+    .empresa-descricao {
+      width: 100%;
+      margin: 20px 0;
+    }
+  
+    .empresa-botao {
+      margin: 0;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .empresa-conteudo h2 {
+      font-size: 22px;
+    }
+  
+    .empresa-descricao p {
+      font-size: 13px;
+    }
+  
+    .empresa-botao {
+      width: 100%;
+    }
+  }
+
+  .bloom-footer
+{
+    --footer-text:#374151;
+    --footer-muted:#6b7280;
+    --footer-link:#013a97;
+    --footer-line:#e5e7eb;
+    background:#f5f7fa;
+    color:var(--footer-text);
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:14px;
+}
+.bloom-footer 
+* {
+    box-sizing:border-box
+}
+.bloom-footer .footer-inner
+{
+    max-width:1180px;
+    margin:0 auto;
+    padding:42px 32px 36px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:28px
+}
+.bloom-footer .footer-brand
+{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    min-width:250px
+}
+.bloom-footer .footer-brand img
+{
+    width:48px;
+    height:48px;
+    object-fit:contain;
+    display:block
+}
+.bloom-footer .footer-brand strong
+{
+    display:block;
+    font-size:22px;
+    line-height:1.2;
+    color:var(--footer-title,#1f2937);
+    font-weight:700
+}
+.bloom-footer .footer-brand p
+{
+    margin:6px 0 0;
+    font-size:14px;
+    line-height:1.5;
+    color:var(--footer-text)
+}
+.bloom-footer .footer-links
+{
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    flex-wrap:wrap;
+    gap:12px 26px
+}
+.bloom-footer .footer-links a
+{
+    font-size:13px;
+    line-height:1.5;
+    color:var(--footer-link);
+    text-decoration:none
+}
+.bloom-footer .footer-links a:hover
+{
+    text-decoration:underline
+}
+.bloom-footer .footer-links a:focus-visible
+{
+    outline:2px solid currentColor;
+    outline-offset:4px;
+    border-radius:2px
+}
+.bloom-footer .footer-bottom
+{
+    padding:16px 24px;
+    text-align:center;
+    font-size:12px;
+    line-height:1.5;
+    color:var(--footer-muted)
+}
+.footer-same-border
+{
+    background:#f5f7fa
+}
+.footer-same-border .footer-bottom
+{
+    border-top:1px solid #e5e7eb
+}
+body
+{
+    margin:0;
+    background:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+    color:#1f2937
+}
+.intro h1
+{
+    font-size:24px;
+    margin:0 0 8px
+}
+.intro p
+{
+    color:#6b7280;
+    line-height:1.5;
+    margin:0
+}
+.demo
+{
+    /* margin:24px auto 36px;
+    max-width:1180px;
+    padding:0 24px */
+}
+.demo h2
+{
+    font-size:17px;
+    margin:0 0 10px
+}
+.demo .note
+{
+    font-size:13px;
+    color:#6b7280;
+    margin:0 0 12px
+}
+.bloom-footer
+{
+    margin:0;
+    margin-top: 4%;
+}
+@media(max-width:720px)
+{
+    .bloom-footer .footer-inner
+    {
+        padding:30px 20px 28px;
+        align-items:flex-start;
+        flex-direction:column;
+        gap:20px
+    }
+    .bloom-footer .footer-brand
+    {
+        min-width:0
+    }
+    .bloom-footer .footer-links
+    {
+        justify-content:flex-start;
+        gap:12px 20px
+    }
+    .bloom-footer .footer-bottom
+    {
+        padding:18px 18px
+    }
+}
+
+

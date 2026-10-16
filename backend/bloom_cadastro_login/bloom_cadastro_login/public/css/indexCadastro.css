@@ -1,0 +1,281 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-family: "Roboto", sans-serif;
+    background-image: url(../image/fundoLoginCadastro.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+form {
+    display:flex;
+    justify-content: center;
+    padding: 5%;
+    border-radius: 10px;
+}
+
+.formulario {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 25%;
+    padding: 1%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0px 0px 27px 1px #88888878;
+}
+
+.formulario > h2 {
+    text-align: center;
+}
+
+.formulario > p {
+    text-align: center;
+}
+
+.formulario > button {
+    padding: 10px;
+    border: thin;
+    border-radius: 13px;
+    background-color: #d13de1;     
+    color: #ffffff;
+    width: 59%;
+}
+
+.info {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.info > input {
+    border-radius: 5px;
+    border: solid thin;
+    padding: 4.5px;
+}
+
+img {
+    height: 78px;
+    width: 83px;
+    margin: auto;
+} */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-image: url("../image/fundoLoginCadastro.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Área externa do formulário */
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 20px;
+    margin: 0;
+}
+
+/* Caixa principal */
+.formulario {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    padding: 22px 30px;
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 0px 27px 1px #88888878;
+}
+
+/* Título */
+.formulario > h2 {
+    text-align: center;
+    font-size: 24px;
+    margin: 8px 0;
+}
+
+/* Texto de descrição */
+.formulario > p {
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.4;
+    margin: 5px 0 10px;
+}
+
+/* Campos de informação */
+.info {
+    width: 100%;
+    max-width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.info > input {
+    width: 100%;
+    min-width: 0;
+
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    padding: 8px;
+    font-size: 15px;
+}
+
+/* Botão */
+.formulario > button {
+    padding: 10px;
+    border: none;
+    border-radius: 13px;
+
+    background-color: #d13de1;
+    color: #ffffff;
+
+    width: 100%;
+    max-width: 260px;
+    margin-top: 10px;
+
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Logo ou imagem */
+.formulario > img {
+    display: block;
+    width: 60px;
+    height: 56px;
+    max-width: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+
+/* Mensagens de erro e sucesso */
+.msg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 101;
+
+    width: 100%;
+    padding: 16px 20px;
+
+    text-align: center;
+    overflow-wrap: anywhere;
+
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.3);
+}
+
+.erro {
+    background-color: rgb(172, 5, 5);
+    color: #fff;
+    border-radius: 5px;
+    width: 48%;
+    position: relative;
+    margin: auto;
+}
+
+.sucesso {
+    background-color: rgb(12, 134, 12);
+    color: #fff;
+}
+
+
+/* Tablets */
+@media (max-width: 768px) {
+    .formulario {
+        width: 95%;
+        max-width: 450px;
+        padding: 22px 25px;
+    }
+
+    .info {
+        max-width: 100%;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    form {
+        padding: 15px;
+    }
+
+    .formulario {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 18px;
+    }
+
+    .formulario > h2 {
+        font-size: 21px;
+    }
+
+    .formulario > p {
+        font-size: 14px;
+    }
+
+    .info,
+    .formulario > button {
+        max-width: 100%;
+    }
+}
+
+/* Celulares com telas pequenas ou baixa altura */
+@media (max-width: 360px) {
+    form {
+        padding: 15px 10px;
+    }
+
+    .formulario {
+        padding: 20px 15px;
+    }
+
+    .formulario > h2 {
+        font-size: 20px;
+    }
+
+    .formulario > img {
+        width: 70px;
+        height: 66px;
+    }
+}
+
+/* Telas com pouca altura */
+@media (max-height: 600px) {
+    body {
+        align-items: flex-start;
+    }
+
+    form {
+        min-height: 100vh;
+    }
+
+    .formulario {
+        margin: 15px 0;
+    }
+}
+
